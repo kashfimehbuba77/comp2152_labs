@@ -163,8 +163,12 @@ loot = loot_options.pop(lootRoll-1)
 belt.append(loot)
 print("Your belt: ", belt)
 
-#lab-04 - Q06
-
+#lab-04 - Q06 - item 2
+input("Roll for the 2nd item (Press Enter)")
+lootRoll = random.choice(range(1, len(loot_options)+ 1))
+loot = loot_options.pop(lootRoll-1)
+belt.append(loot)
+print("Your belt: ", belt)
 
 input("Analyze the roll (Press enter)")
 # Compare Player vs Monster's strength
