@@ -89,7 +89,7 @@ if not input_invalid:
     print("    |    The hero\'s weapon is " + str(weapons[weapon_roll - 1]))
 
     # Lab 06 - Question 5b
-    
+    functions_lab06.adjust_combat_strength(combat_strength, m_combat_strength)
     # Weapon Roll Analysis
     print("    ------------------------------------------------------------------")
     print("    |", end="    ")
@@ -176,12 +176,13 @@ if not input_invalid:
         m_combat_strength) + " using the " + power_roll + " magic power")
     # Lab 06 - Question 6
 
+
     # Call Recursive function
     print("    |", end="    ")
     num_dream_lvls = input("How many dream levels do you want to go down?")
     if num_dream_lvls != 0:
         health_points -= 1
-        crazy_level = functions_lab06_starter.inception_dream(num_dream_lvls)
+        crazy_level = functions_lab06.inception_dream(num_dream_lvls)
         combat_strength += crazy_level
         print("combat strength: " + str(combat_strength))
         print("health points: " + str(health_points))
