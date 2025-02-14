@@ -143,6 +143,8 @@ def save_game(winner, hero_name="", num_stars=0):
     with open('save.txt', 'a') as file:
         if winner == "Hero":
             file.write(f"Hero {hero_name} has killed the monster and gained {num_stars} stars.")
+        elif winner == "Monster":
+            file.write(f"Monster killed thee {hero_name}")
 
 # Lab 06 - Question 5a
 
