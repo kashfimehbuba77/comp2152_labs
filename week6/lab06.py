@@ -176,10 +176,27 @@ if not input_invalid:
         m_combat_strength) + " using the " + power_roll + " magic power")
     # Lab 06 - Question 6
 
-
     # Call Recursive function
-    print("    |", end="    ")
-    num_dream_lvls = input("How many dream levels do you want to go down?")
+    num_dream_lvls = -1
+    while (num_dream_lvls < 0 or num_dream_lvls > 3):
+        print("    |", end="    ")
+        num_dream_lvls = input("How many dream levels do you want to go down?")
+        if(num_dream_lvls == 0):
+            num_dream_lvls = -1
+            print("Dream levels should be a whole number between 0 - 3, try again")
+        else:
+            num_dream_lvls = int(num_dream_lvls)
+            if ((num_dream_lvls < 0) or (num_dream_lvls > 3)):
+                num_dream_lvls = -1
+                print("Dream levels should be a whole number between 0 - 3, try again")
+            elif (not num_dream_lvls == 0):
+                health_points -= 1
+                crazy_level = functions_lab06.inception_dream(num_dream_lvls)
+                combat_strength += crazy_level
+                print("Combat strength: " + str(combat_strength))
+                print("Health point: " + str(health_points))
+        print("num_dream_lvels: " + num_dream_lvls)
+
     if num_dream_lvls != 0:
         health_points -= 1
         crazy_level = functions_lab06.inception_dream(num_dream_lvls)
