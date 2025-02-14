@@ -162,5 +162,4 @@ def load_game():
         return None
     
 
-
 # Lab 06 - Question 5b
