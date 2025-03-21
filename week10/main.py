@@ -26,7 +26,7 @@ try:
                 print(f"{num_rows} rows affected.")
                 db_conn.commit()
             except Exception as e:
-                print("Error executing queey_1:  {e}")
+                print("Error executing queey_1: {e}")
 
 except sqlite3.Error as e:
     print(f"Database connection error: {e}")
