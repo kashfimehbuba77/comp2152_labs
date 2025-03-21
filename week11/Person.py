@@ -19,3 +19,11 @@ class Person:
 
         def __del__(self):
             print("The garbage collector is automatically deleting the person object")
+
+person1 = Person("Mark", 30, 123)        
+print("The name of the person is: " + str(person1.__name))    
+
+person1.name = "Alfredo"
+print("The name of the person is: " + str(person1.__name))  
+
+print("Public " + str(person1.public_prop))
