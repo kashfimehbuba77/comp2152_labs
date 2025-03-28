@@ -26,4 +26,4 @@ print("The name of the person is: " + str(person1.__name))
 person1.name = "Alfredo"
 print("The name of the person is: " + str(person1.__name))  
 
-print("Public " + str(person1.public_prop))
+print("Public " + str(person1.public_prop)) 
